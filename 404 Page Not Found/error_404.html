@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERROR 404</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-color: cadetblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Canva Sans, Noto Sans Variable, Noto Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+        }
+
+        .container {
+            background-image: url(./bg.jpg);
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 22vh;
+        }
+
+        span {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            padding: 5px 12px;
+        }
+
+        p {
+            width: 400px;
+            font-size: 1.2em;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            background-color: #E57F84;
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <span>Opps! Page Not Found</span>
+        <p>The page you were looking for doesn't exist. you may have mistyped the address or the page may have moved.
+        </p>
+        <a href="#">Back To Home</a>
+    </div>
+
+    <script>
+        let cont = document.querySelector(".container");
+        console.log(cont)
+        window.onmousemove = function (e) {
+            let x = - e.clientX / 5,
+                y = - e.clientY / 5;
+            cont.style.backgroundPositionX = x + 'px';
+            cont.style.backgroundPositionY = y + 'px';
+        }
+    </script>
+</body>
+
+</html>
